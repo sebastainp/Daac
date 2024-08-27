@@ -561,8 +561,8 @@ convert_los_to_lol(process, ' ')
 
 
 # Creating Table
-row, col = get_row_column_from_lol(process)
-process_table = doc.add_table(row, col)
+#row, col = get_row_column_from_lol(process)
+process_table = doc.add_table(100, 5)
 
 #process_table.style = "TableGrid"
 process_table.style = "Table Grid"

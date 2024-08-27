@@ -40,7 +40,7 @@ def add_page_number(run):
     run._r.append(instrText)
     run._r.append(fldChar2)
 
-doc = docx.Document('/app/daac/orcl_lld_daac.docx')
+doc = docx.Document('orcl_lld_daac.docx')
 style = doc.styles['Body Text']
 font = style.font
 font.name = 'Verdana'

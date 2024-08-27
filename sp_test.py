@@ -426,8 +426,8 @@ def fill_table(Input_list, Input_table):
 convert_los_to_lol(services, ' ')
 
 # Creating Table
-row, col = get_row_column_from_lol(services)
-services_table = doc.add_table(row, col)
+#row, col = get_row_column_from_lol(services)
+services_table = doc.add_table(100, 5)
 
 #services_table.style = "TableGrid"
 services_table.style = "Table Grid"

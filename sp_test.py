@@ -362,7 +362,7 @@ doc.add_heading(' Installed Software', 2)
 doc_para = doc.add_paragraph()
 doc_para = doc.add_paragraph("This section provides information about List of Installed Software in the system")
 doc_para.add_run("\n ")
-package=os.popen("/usr/bin/rpm -qa|sort|head -20").read().splitlines()
+package=os.popen("rpm -qa|sort|head -20").read().splitlines()
 
 def convert_los_to_lol(input_list, seprator):
     for idx, row in enumerate(input_list):
@@ -537,7 +537,7 @@ doc.add_heading(' Running Processes', 2 )
 doc_para = doc.add_paragraph()
 doc_para = doc.add_paragraph("This section provides information about List of running processes in the system. ")
 doc_para.add_run("\n")
-process=os.popen("/usr/bin/ps -eo user,pid,cmd|tail -50|grep -Ev 'tail|/usr/bin/ps|awk|sh'|awk '{print $1,$2,$3}'").read().splitlines()
+process=os.popen("ps -eo user,pid,cmd|tail -50|grep -Ev 'tail|ps|awk|sh'|awk '{print $1,$2,$3}'").read().splitlines()
 
 def convert_los_to_lol(input_list, seprator):
     for idx, row in enumerate(input_list):
@@ -911,7 +911,7 @@ doc.add_heading(' Current Login Details', 2)
 doc_para = doc.add_paragraph()
 doc_para = doc.add_paragraph("This section contains the Current login information in RHEL server ")
 doc_para.add_run("\n ")
-login=os.popen("/usr/bin/who|grep -Ev tty").read().splitlines()
+login=os.popen("who|grep -Ev tty").read().splitlines()
 
 table = doc.add_table(rows=1, cols=5)
 table.style = "Table Grid"
@@ -1221,7 +1221,7 @@ doc.add_page_break()
 doc.add_heading(' Health Checkup ')
 doc_para = doc.add_paragraph("The following data table is very important during hardening and onboarding of RHEL Server instance. It provides Precise information about server health based on Information Security Standards. ")
 doc_para.add_run("\n ")
-#os.system("/usr/bin/python3 Linux_Helath_Check.py")
+#os.system("python3 Linux_Helath_Check.py")
 #ht=os.popen("cat HEALTH.txt").read().splitlines()
 
 ## Create tables

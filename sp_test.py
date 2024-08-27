@@ -383,8 +383,8 @@ def fill_table(Input_list, Input_table):
 
 convert_los_to_lol(package, ' ')
 # Creating Table
-row, col = get_row_column_from_lol(package)
-package_table = doc.add_table(row, col)
+#row, col = get_row_column_from_lol(package)
+package_table = doc.add_table(100, 5)
 
 #package_table.style = "TableGrid"
 package_table.style = "Table Grid"

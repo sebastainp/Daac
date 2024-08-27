@@ -362,7 +362,7 @@ doc.add_heading(' Installed Software', 2)
 doc_para = doc.add_paragraph()
 doc_para = doc.add_paragraph("This section provides information about List of Installed Software in the system")
 doc_para.add_run("\n ")
-package=os.popen("/bin/rpm -qa|sort|head -20").read().splitlines()
+package=os.popen("/usr/bin/rpm -qa|sort|head -20").read().splitlines()
 
 def convert_los_to_lol(input_list, seprator):
     for idx, row in enumerate(input_list):
